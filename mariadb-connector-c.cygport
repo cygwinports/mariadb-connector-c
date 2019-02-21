@@ -1,7 +1,7 @@
 inherit cmake
 
 NAME="mariadb-connector-c"
-VERSION=3.0.8
+VERSION=3.0.9
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="MySQL/MariaDB client library"
@@ -57,14 +57,14 @@ src_install() {
 	cd ${B}
 	ninja_install
 
-	pushd ${D}${_includedir}/mysql
+	pushd ${D}/usr/include/mysql
 	rm -f CMakeLists.txt Makefile.am *.h.in
 	ln -s mariadb_version.h mysql_version.h
 	popd
 
-	dodir ${_bindir}
-	pushd ${D}${_libdir}
-	mv *.dll ${D}${_bindir}/
+	dodir /usr/bin
+	pushd ${D}/usr/lib
+	mv *.dll ${D}/usr/bin/
 	rm libmariadbclient.a
 	# compatibility symlinks for mysql
 	ln -s libmariadb.dll.a libmysqlclient.dll.a
