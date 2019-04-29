@@ -22,7 +22,8 @@ libmariadb3_REQUIRES="mariadb-common"
 libmariadb3_CONTENTS="
 	usr/bin/cygmariadb-3.dll
 "
-libmariadb_devel_OBSOLETES="libmysqlclient-devel"
+# our version is less than previous mysql packages which provided this
+#libmariadb_devel_OBSOLETES="libmysqlclient-devel"
 libmariadb_devel_CONTENTS="
 	usr/bin/mariadb_config.exe
 	usr/bin/mysql_config
