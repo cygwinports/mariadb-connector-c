@@ -33,7 +33,6 @@ libmariadb_devel_CONTENTS="
 	usr/lib/libmysqlclient_r.dll.a
 	usr/lib/pkgconfig/libmariadb.pc
 "
-mariadb_common_OBSOLETES="mysql-common"
 mariadb_common_CONTENTS="
 	etc/defaults/etc/my.cnf*
 	etc/my.cnf.d
